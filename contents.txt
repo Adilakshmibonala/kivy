@@ -1,0 +1,13 @@
+12-11-2024
+- Exploring venv 
+- writing kivi 1st app
+- Label class. 
+
+
+18-11-2024
+- args and kwargs. 
+- login screen
+
+
+09-12-2024
+- login screen
