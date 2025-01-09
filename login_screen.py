@@ -5,7 +5,8 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 
 
-class LoginScreen123App(App): # kiwi app name.
+
+class LoginScreen1234567(App): #LoginScreenApp --> LoginScreenApp --> Remove the name APP -> LoginScreen
     def build(self):
         return LoginScreenGrid()
 
@@ -13,14 +14,19 @@ class LoginScreen123App(App): # kiwi app name.
 class LoginScreenGrid(GridLayout):
     
     def __init__(self, **kwargs):
-        super(LoginScreenGrid, self).__init__(**kwargs)
+        super(LoginScreenGrid, self).__init__(**kwargs) # super()
 
         self.cols = 2
-        self.add_widget(Label(text="UserName", height=30, size_hint_y=None))
-        self.username_text_object = TextInput(height=30, size_hint_y=None)
-        self.add_widget(self.username_text_object)
+        self.padding = [20, 20, 20, 20]
+        self.spacing = 20
+        self.size_hint = (0.5, 0.5) # (h, w)
+        self.pos_hint = {'center_x': 0.5, 'center_y': 0.5} # Position
 
-        self.add_widget(Label(text="Password", height=30, size_hint_y=None))
+        self.add_widget(Label(text="UserName", height=30, size_hint_y=None)) # 1
+        self.username_text_object = TextInput(height=30, size_hint_y=None) # 3
+        self.add_widget(self.username_text_object)
+        
+        self.add_widget(Label(text="Password", height=30, size_hint_y=None)) # 4
         self.password_text_obj = TextInput(password=True, height=30, size_hint_y=None)
         self.add_widget(self.password_text_obj)
 
@@ -41,5 +47,5 @@ class LoginScreenGrid(GridLayout):
             label_obj.text="Invalid username and password!!"
 
 
-LoginScreen123App().run()
+LoginScreen1234567().run()
 
